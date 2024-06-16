@@ -157,23 +157,5 @@ body {
     }
 }
 
-@media (max-width: 480px) {
-    h1 {
-        font-size: 2rem;
-        top: 10px;
-    }
 
-    .gallery {
-        width: 100px;
-        height: 100px;
-    }
-
-    .gallery span {
-        transform: rotateY(calc(var(--i) * 45deg)) translateZ(200px);
-    }
-
-    .gallery span img {
-        border-width: 1px;
-    }
-}
   
