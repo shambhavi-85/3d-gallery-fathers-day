@@ -159,17 +159,17 @@ body {
 
 @media (max-width: 480px) {
     h1 {
-        font-size: 1rem;
-        top: 2px;
+        font-size: 1.5rem;
+        top: 5px;
     }
 
     .gallery {
-        width: 25px;
-        height: 25px;
+        width: 75px;
+        height: 75px;
     }
 
     .gallery span {
-        transform: rotateY(calc(var(--i) * 45deg)) translateZ(100px);
+        transform: rotateY(calc(var(--i) * 45deg)) translateZ(200px);
     }
 
     .gallery span img {
