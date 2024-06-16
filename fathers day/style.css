@@ -1,0 +1,140 @@
+/* https://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Bebas+Neue&family=Cormorant:wght@300;400;500;600;700&family=Fjalla+One&family=Gloria+Hallelujah&family=Gochi+Hand&family=Indie+Flower&family=Jost:wght@600&family=Marcellus&family=Montserrat:wght@400;600;700;900&family=Nanum+Brush+Script&family=Nothing+You+Could+Do&family=Noto+Serif:wght@700&family=Open+Sans:wght@300;400;500;600&family=Permanent+Marker&family=Poppins:wght@200;300;400;500;600;700;800;900&family=Reenie+Beanie&family=Roboto+Mono:wght@100;200;300;400;500;600;700&family=Rock+Salt&family=Sedgwick+Ave&family=Shantell+Sans:ital@1&family=Short+Stack&family=Urbanist:wght@600&family=Wix+Madefor+Display:wght@700&display=swap');
+
+@font-face {
+  font-family: "ClashDisplay";
+  src: local("ClashDisplay"),
+       url("/fonts/ClashDisplay-Medium.otf") format("otf");
+}
+
+h1 {
+    font-size: 3rem;
+    letter-spacing: 0.9px;
+    background: rgba(249, 211, 180, 1);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: fit-content;
+    position: absolute; /* Positioning the h1 element */
+    top: 20px; /* Adjust the distance from the top */
+    left: 50%; /* Move the element to the center horizontally */
+    transform: translateX(-50%); /* Center the element horizontally */
+    transition: color 0.5s ease, background 0.5s ease;
+}
+h1:hover {
+    color: #000;
+    background: linear-gradient(45deg, #ff9a8b, #ff6b6b, #ff5151); /* Hover gradient colors */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+  
+
+
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background: #000;
+	background: -webkit-linear-gradient(to right, #2c5364, #203a43, #0f2027);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+	overflow: hidden;
+}
+.gallery {
+	position: relative;
+	width: 200px;
+	height: 200px;
+	transform-style: preserve-3d;
+	animation: slid 20s linear infinite;
+	&:hover {
+		animation-play-state: paused;
+	  }
+}
+.gallery span {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transform-origin: center;
+	transform-style: preserve-3d;
+	transform: rotateY(calc(var(--i) * 45deg)) translateZ(350px);
+}
+.gallery span img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+	object-fit: cover;
+	transition: 2s;
+    border: 1px solid rgba(255, 255, 255, 0.20);
+}
+.gallery span:hover img {
+    animation: borderAnimation 2s linear infinite;
+}
+
+@keyframes borderAnimation {
+    0% {
+        border-color: white transparent transparent transparent;
+        border-width: 3px;
+    }
+    12.5% {
+        border-color: white white transparent transparent;
+        border-width: 3px;
+    }
+    25% {
+        border-color:white white white transparent;
+        border-width: 3px;
+    }
+    37.5% {
+        border-color: white white white white;
+        border-width: 3px;
+    }
+    50% {
+        border-color: transparent white white white;
+        border-width: 3px;
+    }
+    62.5% {
+        border-color: transparent transparent white white;
+        border-width: 3px;
+    }
+    75% {
+        border-color: transparent transparent transparent white;
+        border-width: 3px;
+    }
+    87.5% {
+        border-color: white transparent transparent white;
+        border-width: 3px;
+    }
+    100% {
+        border-color: white transparent transparent transparent;
+        border-width: 3px;
+    }
+}
+@keyframes slid {
+	0% {
+	  transform: perspective(1000px) rotateY(0deg);
+	}
+	100% {
+	  transform: perspective(1000px) rotateY(360deg);
+	}
+}
+  
