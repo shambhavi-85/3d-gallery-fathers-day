@@ -159,13 +159,13 @@ body {
 
 @media (max-width: 480px) {
     h1 {
-        font-size: 1.5rem;
-        top: 5px;
+        font-size: 2rem;
+        top: 10px;
     }
 
     .gallery {
-        width: 75px;
-        height: 75px;
+        width: 100px;
+        height: 100px;
     }
 
     .gallery span {
