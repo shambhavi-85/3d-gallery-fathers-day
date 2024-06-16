@@ -137,4 +137,43 @@ body {
 	  transform: perspective(1000px) rotateY(360deg);
 	}
 }
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+        top: 10px;
+    }
+
+    .gallery {
+        width: 150px;
+        height: 150px;
+    }
+
+    .gallery span {
+        transform: rotateY(calc(var(--i) * 45deg)) translateZ(250px);
+    }
+
+    .gallery span img {
+        border-width: 2px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+        top: 5px;
+    }
+
+    .gallery {
+        width: 100px;
+        height: 100px;
+    }
+
+    .gallery span {
+        transform: rotateY(calc(var(--i) * 45deg)) translateZ(200px);
+    }
+
+    .gallery span img {
+        border-width: 1px;
+    }
+}
   
